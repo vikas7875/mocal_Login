@@ -1,0 +1,53 @@
+<div class="text-center">
+    <div class="text-center m-auto">
+        <a routerLink="/">
+            <img class="logo-img" src="" alt="">
+          </a>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate class="d-flex-center">
+      <div class="example-container">
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="enter email address / phone number" formControlName="email">
+            <mat-error *ngIf="!loginForm.get('email')?.errors?.required && (loginForm.get('email')?.errors?.pattern)">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.required">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mt-top-2">
+          <mat-form-field>
+            <input matInput type="password" placeholder="enter password" formControlName="password">    
+            <mat-error *ngIf="!loginForm.get('password')?.errors?.required">
+              Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.required">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+            <a href="#">Forget Password?</a>
+        </div>
+        <div class="mt-top">
+          <button [disabled]="!loginForm.valid" mat-raised-button color="primary" mat-button>Log In</button>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="google-btn">
+                    <div class="google-icon-wrapper">
+                      <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                    </div>
+                    <p class="btn-text">Log In with Google</p>
+                  </div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+      </div>
+    </form>
+    <div>
+        <p>New User? <a href="#">Register</a></p>
+    </div>
+  </div>
