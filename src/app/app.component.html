@@ -1,2 +1,10 @@
-
-<router-outlet></router-outlet>
+<main class="main-container">
+    <aside class="banner-left">
+        <section class="title">Welcome to</section>
+        <section class="title1">MoCal!</section>
+        <section class="title3">Get Your First Month Free.</section>
+        <section class="title4">Sign Up Now!</section>
+    </aside>
+    <router-outlet></router-outlet>
+    <aside class="banner-right" [innerHtml]="template"></aside>
+</main>

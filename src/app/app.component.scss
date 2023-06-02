@@ -1,0 +1,44 @@
+.main-container{
+    height: 100%;
+    background-image: url("../assets/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner-left{
+        padding-left: 9%;
+        padding-top: 4%;
+
+        .title{
+            color: #BA8AC7;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .title1{
+            color: #FDEC07;
+            font-size: 34px;
+            font-weight: 600;
+            padding-top: 20px;
+        }
+        .title3{
+            color: #FFFFFF;
+            padding-top: 25px;
+            font-size: 16px;
+            font-weight: 500;
+
+        }
+        .title4{
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .banner-right{
+        display: flex;
+        justify-content: flex-end;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+        padding-right: 5%;
+    }
+}
